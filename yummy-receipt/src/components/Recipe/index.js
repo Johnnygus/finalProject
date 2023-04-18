@@ -6,7 +6,7 @@ import NutritionLabel from './NutritionLabel';
 import WinePairing from './WinePairing';
 import RelatedRecipes from './RelatedRecipes';
 import './RecipeDetails.css';
-import Navbar from '../Home/Navbar';
+import Navbar from '../Navbar/Navbar';
 import foodBanner from '../Home/food_banner4.jpg';
 
 const SPOON_API_KEY = process.env.REACT_APP_SPOON_API_KEY;

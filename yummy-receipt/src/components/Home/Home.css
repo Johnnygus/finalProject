@@ -15,21 +15,19 @@
   }
   
   .webtitle {
-    font-family: 'Rubik Mono One', sans-serif;
-    font-size: 7.5rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-family: 'Dancing Script';
+    font-size: 6.5rem;
     z-index: 1;
-    background: linear-gradient(to right, #ff3333 35%, white 35%);
-    -webkit-background-clip: text;
-    color: transparent;
+    color: white;
+    text-align: center;
   }
   
-  .content {
-    padding-top: 80vh;
+  *{
+    font-family: 'Noto Sans', sans-serif;
   }
-  
+
   h2{
-    font-family: 'Rubik Mono One', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
     font-size: 30px;
   }
 
@@ -54,12 +52,11 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     overflow: hidden;
-    text-align: left;
-    font-size: 20px;
-    padding-top: 10px;
-    font-family: 'Roboto', sans-serif;
-    color:white;
-    background-color: lightseagreen;
+    text-align: center;
+    position: relative;
+    /* color:white;
+    background-color: lightslategray;
+    font-size: 22px; */
   }
   
   .new-recipe img {
@@ -72,5 +69,15 @@
   .new-recipe a {
     color: inherit;
     text-decoration: none;
+  }
+  
+  .site-logo {
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    transform: translate(-50%, -50%);
+    max-width: 170px;
+    max-height: 170px;
+    z-index: 1;
   }
   

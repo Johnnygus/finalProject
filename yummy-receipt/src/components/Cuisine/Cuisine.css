@@ -15,13 +15,11 @@
   }
   
   .webtitle2 {
-    font-family: 'Rubik Mono One', sans-serif;
-    font-size: 7.5rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-family: 'Dancing Script';
+    font-size: 6.5rem;
     z-index: 1;
-    background: linear-gradient(to right, #ff3333 35%, white 35%);
-    -webkit-background-clip: text;
-    color: transparent;
+    color: white;
+    text-align: center;
   }
   
   .content {
@@ -58,5 +56,76 @@
   .recipe-item a {
     color: inherit;
     text-decoration: none;
+  }
+
+  .cuisine-label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-right: 0.5rem;
+  }
+  
+  .cuisine-dropdown {
+    padding: 0.5rem 1.0rem;
+    font-size: 1.1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    appearance: none;
+    background-color: #fff;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5" width="20" height="20" fill="black"><path d="M2 0L0 2h4zm0 5L0 3h4z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 0.7rem center;
+    background-size: 0.8em;
+    cursor: pointer;
+  }
+  
+  .cuisine-dropdown:hover {
+    border-color: #888;
+  }
+  
+  .cuisine-dropdown:focus {
+    border-color: #007bff;
+  }
+  
+  .total-results {
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+  }
+
+  .diet-label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-right: 0.5rem;
+  }
+  
+  .diet-dropdown {
+    padding: 0.5rem 1.0rem;
+    font-size: 1.1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    appearance: none;
+    background-color: #fff;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5" width="20" height="20" fill="black"><path d="M2 0L0 2h4zm0 5L0 3h4z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 0.7rem center;
+    background-size: 0.8em;
+    cursor: pointer;
+  }
+  
+  .diet-dropdown:hover {
+    border-color: #888;
+  }
+  
+  .diet-dropdown:focus {
+    border-color: #007bff;
+  }
+
+  .selections-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
   }
   
