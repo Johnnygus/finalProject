@@ -1,0 +1,31 @@
+.related-recipes {
+    margin-top: 2rem;
+  }
+  
+  .related-recipes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .related-recipe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .related-recipe-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .related-recipe-title {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    text-align: center;
+  }
+  

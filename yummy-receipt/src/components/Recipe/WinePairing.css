@@ -1,0 +1,22 @@
+.wine-pairing {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+  }
+  
+  .wine-item {
+    margin-bottom: 1rem;
+  }
+  
+  .wine-item:last-child {
+    margin-bottom: 0;
+  }
+  
+  .wine-image {
+    width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
