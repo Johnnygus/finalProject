@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import foodBanner from './food_banner5.jpg';
+import foodBanner from '../Hero/hero4.mp4';
 import Navbar from '../Navbar/Navbar';
 import siteLogo from './siteLogo.png';
 import './Home.css';
@@ -30,9 +30,12 @@ const Home = () => {
   return (
     <div>
       <Navbar />
-      <div className="hero" style={{ backgroundImage: `url(${foodBanner})` }}>
+      <div className="hero">
+        <video className="hero-video" autoPlay loop muted>
+          <source src={foodBanner} type="video/mp4" />
+        </video>
         <img className="site-logo" src={siteLogo} alt="Site Logo" />
-        <h1 className='webtitle'>Where every flavor tells a story.</h1>
+        <h1 className="webtitle">Where every flavor tells a story.</h1>
       </div>
       <div className="new-recipes-section">
         <h2>New Recipes</h2>
@@ -44,12 +47,7 @@ const Home = () => {
               <Link to={`/cuisine/${cuisineName}/recipe/${recipe.id}`}>
                   {recipe.title}
                 </Link>
-
               </h3>
-              
-              
-                
-              
             </div>
           ))}
         </div>

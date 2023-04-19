@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
-import foodBanner from '../Home/food_banner.jpg';
+import foodBanner from '../Hero/food_banner.jpg';
 import siteLogo from '../Home/siteLogo.png';
 import './Cuisine.css';
 
@@ -13,6 +13,7 @@ const Cuisine = () => {
   const [selectedCuisine, setSelectedCuisine] = useState(cuisineName);
   const [totalResults, setTotalResults] = useState(0);
   const [selectedDiet, setSelectedDiet] = useState('');
+  const [searchKeyword, setSearchKeyword] = useState('');
 
   const cuisines = [
     'Any','American','British','Caribbean','Chinese','French','German','Greek','Indian','Irish','Italian','Japanese','Jewish','Korean','Mexican','Spanish','Thai','Vietnamese',
@@ -32,7 +33,9 @@ const Cuisine = () => {
         if (selectedDiet !== 'Any') {
           url += `&diet=${selectedDiet}`;
         }
-  
+        if (searchKeyword) {
+          url += `&query=${searchKeyword}`;
+        }
         const response = await fetch(url);
         const data = await response.json();
         console.log('API response:', data);
@@ -44,11 +47,8 @@ const Cuisine = () => {
     };
   
     fetchRecipes();
-  }, [selectedCuisine, selectedDiet]);
+  }, [selectedCuisine, selectedDiet, searchKeyword]);
   
-  
-
-
   
   const handleChange = (event) => {
     setSelectedCuisine(event.target.value);
@@ -58,6 +58,14 @@ const Cuisine = () => {
     setSelectedDiet(event.target.value);
   };
   
+  const handleSearchChange = (event) => {
+    setSearchKeyword(event.target.value);
+  };
+
+  const handleSearchSubmit = (event) => {
+    event.preventDefault();
+  };
+
   return (
     <div>
       <Navbar />
@@ -96,8 +104,21 @@ const Cuisine = () => {
                 </option>
               ))}
             </select>
-          </div>   
+          </div> 
+          
+          <div className="search-keyword">
+            <form onSubmit={handleSearchSubmit}>
+              <input
+                type="text"
+                className="search-input"
+                placeholder="Search by keyword"
+                value={searchKeyword}
+                onChange={handleSearchChange}
+              />
+            </form>
+          </div> 
         </div>
+  
         <div className="total-results">Total Recipes: {totalResults}</div>
         <div className="recipe-list">
           {recipes &&

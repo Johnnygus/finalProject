@@ -7,7 +7,8 @@ import WinePairing from './WinePairing';
 import RelatedRecipes from './RelatedRecipes';
 import './RecipeDetails.css';
 import Navbar from '../Navbar/Navbar';
-import foodBanner from '../Home/food_banner4.jpg';
+import foodBanner from '../Hero/food_banner5.jpg';
+import siteLogo from '../Home/siteLogo.png';
 
 const SPOON_API_KEY = process.env.REACT_APP_SPOON_API_KEY;
 
@@ -97,10 +98,12 @@ const RecipeDetails = () => {
     <div>
     <Navbar />
       <div className="hero" style={{ backgroundImage: `url(${foodBanner})` }}>
+        <img className="site-logo" src={siteLogo} alt="Site Logo" />
         <h1 className='webtitle2'> Enjoy the day </h1>
       </div>
-    <div className="recipe-details">
-      {recipeDetails ? (
+    <div className='content'> 
+      <div className="recipe-details">
+        {recipeDetails ? (
         <>
           <h2 className="recipe-title">{recipeDetails.title}</h2>
           <div className="recipe-image-container">
@@ -140,6 +143,7 @@ const RecipeDetails = () => {
       )}
     </div>
     </div>
+    </div> 
   );
 };
 

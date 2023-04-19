@@ -79,6 +79,19 @@
     cursor: pointer;
   }
   
+  .search-input {
+    padding: 0.5rem 1.0rem;
+    font-size: 1.1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    appearance: none;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: right 0.7rem center;
+    background-size: 0.8em;
+  }
+
   .cuisine-dropdown:hover {
     border-color: #888;
   }
